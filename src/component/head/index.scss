@@ -1,0 +1,70 @@
+.head{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 60px;
+    padding-top: 100px;
+    width: 750px;
+    height: 400px;
+    background-image: url(../../static/images/headbg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    justify-content: space-between;
+    .userinfo{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        .username{
+            font-size: 45px;
+            color: #ffffff;
+            padding: 10px 0;
+        }
+        .sign{
+            padding: 20px 0;
+            font-size: 32px;
+            color: #ffffff;
+        }
+    }
+    .avatarimg{
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+        border: 3px solid #d3d4d5;
+        overflow: hidden;
+        img{
+            width: 160px;
+            height: 160px;
+            object-fit:cover;
+        }
+    }
+    .status{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px 0;
+        p{
+            color: #ffffff;
+            font-size: 28px;
+            &.follow-btn{
+                padding: 10px 20px;
+                border-radius: 30px;
+                background-color: #ffcc08;
+                color: #000;
+            }
+            &.followed-btn{
+                padding: 10px 20px;
+                border-radius: 30px;
+                color: #cccccc;
+                border: 1px solid #cccccc;
+            }
+        }
+        .benotice{
+            padding-left: 40px;
+        }
+    }
+}

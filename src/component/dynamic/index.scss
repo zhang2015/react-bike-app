@@ -1,0 +1,82 @@
+
+        .dynamics-list{
+            position: relative;
+            overflow: auto;
+            .dynamics-item{
+                padding: 30px;
+                .dynamics-head{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .dynamics-avatar{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 100%;
+                        object-fit:cover;
+                        border: 3px solid #d3d4d5;
+                        overflow: hidden;
+                    }
+                    .dynamics-user{
+                        padding-left: 25px;
+                        .dynamics-username{
+                            font-size: 34px;
+                            color: #333;
+                        }
+                        .dynamics-createtime{
+                            font-size: 26px;
+                            color: #666;
+                            padding-top: 20px;
+                        }
+                    }
+                }
+                .content{
+                    line-height: 40px;
+                    font-size: 30px;
+                    padding: 20px 0;
+                }
+                .dynamic-img{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .dynamic-imgitem{
+                        width: 200px;
+                        height: 200px;
+                        object-fit:cover;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        &:nth-child(3n){
+                            margin-right: 0;
+                        }
+                    }
+                    &.dynamic-img-only{
+                        display: block;
+                        .dynamic-imgitem{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                .dynamic-option{
+                    display: flex;
+                    p{
+                        display: flex;
+                        align-items: center;
+                        padding-right: 40px;
+                        img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        span{
+                            padding: 0 10px;
+                            font-size: 30px;
+                            color: #333;
+                        }
+                    }
+                }
+            }
+            .loadnext{
+                padding-top: 10px;
+                padding-bottom: 50px;
+                text-align: center;
+                color: #ccc;
+            }
+        }

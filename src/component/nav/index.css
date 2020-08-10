@@ -1,0 +1,15 @@
+.nav{
+    width: 750px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    background-color: #e3e3e3;
+}
+.nav a{
+    display: block;
+    flex: 1;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+}

@@ -1,0 +1,38 @@
+.setting{
+    padding: 30px;
+    h2{
+
+    }
+    .label{
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.54);
+        margin-top: 30px;
+    }
+    .avatarurl{
+        display: block;
+        width: 200px;
+        height: 200px;
+        object-fit:cover;
+        margin: auto;
+        border-radius: 100%;
+        border: 3px solid #d3d4d5;
+        overflow: hidden;
+    }
+    .setting-item{
+        margin: 20px 0;
+    }
+    .sub-btn{
+        height: 90px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .gender-select{
+        margin: 20px 0;
+    }
+    .gender{
+        flex-direction: row;
+        .MuiFormControlLabel-root{
+            margin: 0 60px;
+        }
+    }
+}

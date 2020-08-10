@@ -1,45 +1,39 @@
-import React, { Component } from 'react';
-import axios from "axios";
-import Deletebtn from '../../component/delete';
-class Home extends Component {
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config'
+import './index.scss'
+import AddImg from '../../static/images/add.png'
+
+export default class My extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { list: [] }
+        this.state = {
+            route: props.route,
+        }
     }
-    componentDidMount() {
-        this.getListData();
-    }
-    getListData() {
-        axios.get('/goods', {
-            params: {
-                page: 1,
-                pageSize: 10,
-                sort: 1
-            },
-            headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' }
-        })
-            .then((response) => {
-                this.setState({
-                    list: response.data.result.list
-                });
-            })
-            .catch((error) => {
-                console.log(error);
-                this.setState({
-                    isLoaded: false,
-                    error: error
-                })
-            })
-    }
+    toRelease = () => {
+        this.props.history.push(`/release`);
+     }
     render() {
+        const route = this.state.route;
         return (
-            <div>
-                <h2>Home</h2>
-                {this.state.list.map((element) =>
-                    <div key={element._id}>{element.name}<Deletebtn id={element.id} /></div>
-                )}
+            <div className="wrap">
+                <div className="content">{renderRoutes(route.children)}</div>
+                
+                <div className="nav">
+                    <ul>
+                        <li>
+                            <Link to="/home/index">首页</Link>
+                        </li>
+                        <li>
+                            <Link to="/home/my">个人中心</Link>
+                        </li>
+                    </ul>
+                    <div className="release" onClick={this.toRelease}>
+                        <img src={AddImg} alt="add"/>
+                    </div>
+                </div>
             </div>
-        );
+        )
     }
 }
-export default Home;
